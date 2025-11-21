@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">RevoU</div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#profile">Our Profile</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Message Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="banner">
+      <div class="container banner-inner">
+        <div class="banner-text">
+          <h1>Hi <span id="greetName">Harti</span>, Welcome To Website</h1>
+          <p class="subtitle">Ini adalah website latihan pertama</p>
+        </div>
+        <div class="banner-photo" aria-hidden="true">1366×578</div>
+      </div>
+    </section>
+
+    <section class="hq">
+      <div class="container">
+        <h2>Our Headquarter</h2>
+        <div class="hq-list">
+          <div class="hq-item">
+            <div class="hq-circle"></div>
+            <div class="hq-caption">Jakarta</div>
+          </div>
+          <div class="hq-item">
+            <div class="hq-circle"></div>
+            <div class="hq-caption">Bandung</div>
+          </div>
+          <div class="hq-item">
+            <div class="hq-circle"></div>
+            <div class="hq-caption">Surabaya</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="profile">
+      <div class="container profile-inner">
+        <div class="profile-photo" role="img" aria-label="Company photo">Photo</div>
+        <div class="profile-content">
+          <h2>About Our Company</h2>
+          <p>We are a creative digital agency focusing on delivering quality products and delightful user experiences. We combine strategy, design and engineering to help businesses grow.</p>
+
+          <h3>Vision</h3>
+          <p>To be a leading digital partner that empowers brands to thrive in the digital age.</p>
+
+          <h3>Mission</h3>
+          <ul>
+            <li>Deliver high quality digital products.</li>
+            <li>Foster innovation and continuous learning.</li>
+            <li>Build long-lasting partnerships with our clients.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <p class="muted">A few selected works (you can customize)</p>
+        <div class="portfolio-grid">
+          <div class="card">Project A</div>
+          <div class="card">Project B</div>
+          <div class="card">Project C</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div class="contact-form-wrap">
+          <h2>Message Us</h2>
+          <form id="contactForm" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Nama">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="email@example.com">
+
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="0812xxxx">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Pesan"></textarea>
+
+            <button type="submit" class="btn">Submit</button>
+            <div id="formError" class="form-error" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <div class="contact-display">
+          <div class="display-box" id="displayBox">
+            <div class="time" id="currentTime">Current time:</div>
+            <div id="submittedValues">No submission yet.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">Created By Anf</div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
