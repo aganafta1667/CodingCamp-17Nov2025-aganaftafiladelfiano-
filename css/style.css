@@ -1,1 +1,77 @@
-tes
+/* Simple reset */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--accent:#f0c040;--muted:#666;--container:1100px}
+body{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;color:#111;line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+
+/* Header */
+.site-header{background:#fff;border-bottom:1px solid #ddd}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.logo{font-weight:700;color:var(--accent)}
+.nav{display:flex;gap:1rem}
+.nav a{padding:0.5rem 0.75rem;border-radius:6px;text-decoration:none;color:#333;border:1px solid transparent}
+.nav a:hover{background:#f7f7f7;border-color:#ddd}
+.nav-toggle{display:none;background:transparent;border:0;font-size:1.25rem}
+
+/* Banner */
+.banner{padding:2.5rem 0;border-bottom:1px solid #ddd}
+.banner-inner{display:flex;gap:2rem;align-items:center}
+.banner-text h1{font-size:1.5rem;margin-bottom:0.25rem}
+.subtitle{color:var(--muted);font-size:0.95rem}
+.banner-photo{flex:1;background:#fafafa;border:1px dashed #ddd;height:260px;display:flex;align-items:center;justify-content:center;color:#999}
+
+/* HQ section */
+.hq{padding:1.5rem 0;border-bottom:1px solid #ddd}
+.hq-list{display:flex;gap:2rem;justify-content:flex-start;margin-top:1rem}
+.hq-item{text-align:center}
+.hq-circle{width:100px;height:100px;border:2px solid #bbb;border-radius:50%;margin:0 auto}
+.hq-caption{margin-top:0.5rem;color:var(--muted)}
+
+/* Profile */
+.profile{padding:2rem 0;border-bottom:1px solid #ddd}
+.profile-inner{display:flex;gap:2rem;align-items:flex-start}
+.profile-photo{width:280px;height:220px;background:#eee;border:1px solid #ddd;display:flex;align-items:center;justify-content:center}
+.profile-content h2{margin-bottom:0.5rem}
+.profile-content p{color:#333;margin-bottom:0.75rem}
+.profile-content ul{margin-left:1rem;color:#333}
+
+/* Portfolio */
+.portfolio{padding:2rem 0;border-bottom:1px solid #ddd}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.card{background:#fff;border:1px solid #ddd;padding:1.25rem;text-align:center}
+.muted{color:var(--muted)}
+
+/* Contact */
+.contact{padding:2rem 0}
+.contact-inner{display:flex;gap:2rem}
+.contact-form-wrap{flex:1}
+.contact-display{width:360px}
+.display-box{border:1px solid #bbb;padding:1rem;background:#fafafa;min-height:200px}
+label{display:block;margin-top:0.5rem;margin-bottom:0.25rem;font-weight:600}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;padding:0.6rem;border:1px solid #ccc;border-radius:4px}
+.btn{margin-top:0.75rem;padding:0.5rem 0.75rem;border:0;background:var(--accent);color:#111;border-radius:4px;cursor:pointer}
+.form-error{color:#b00020;margin-top:0.5rem}
+
+/* Footer */
+.site-footer{border-top:1px solid #ddd;padding:1rem 0;margin-top:1rem}
+
+/* Responsive */
+@media (max-width:900px){
+	.profile-inner{flex-direction:column}
+	.banner-inner{flex-direction:column}
+	.portfolio-grid{grid-template-columns:repeat(2,1fr)}
+	.contact-inner{flex-direction:column}
+	.contact-display{width:100%}
+}
+
+@media (max-width:600px){
+	.nav{display:none;flex-direction:column;background:#fff;position:absolute;right:1rem;top:56px;padding:0.5rem;border:1px solid #eee;border-radius:6px}
+	.nav-toggle{display:block}
+	.container{padding:0.6rem}
+	.hq-list{flex-direction:row;gap:1rem;justify-content:space-between}
+	.portfolio-grid{grid-template-columns:1fr}
+	.banner-photo{height:160px}
+	.banner-text h1{font-size:1.2rem}
+}
+
+.nav.open{display:flex}
